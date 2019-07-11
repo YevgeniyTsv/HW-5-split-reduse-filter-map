@@ -1,0 +1,122 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script>
+    console.log ('+1) Удалить из строки повторяющиеся символы')   
+      
+        var first = '1234156117181119999';
+
+        first = first.split('').reduce(((a, b) => (a.indexOf(b) === -1) ? (a += b) : a), '');
+        console.log(first);
+
+    console.log ('=================================') 
+
+
+    
+    console.log ('+2) Найти количество слов в строке: Hi, i am learning javascript') 
+
+        function WordCount(str) {       
+        let second = 'Hi, i am learning javascript';
+            return str.split(" ").length;
+        }
+           console.log(WordCount("Hi, i am learning javascript"));
+
+    console.log ('=================================') 
+
+    
+    
+    console.log ('+3) Самое длинное слово в строке (Hi, i am learning javascript)')  
+
+        var third = 'Hi, i am learning javascript';
+
+         function findLongWord(str) {
+            let longWord = str.split(' ').sort((a, b) => {return b.length - a.length;})
+            return longWord[0];
+        }
+        str = ('Hi, i am learning javascript');
+        
+        console.log (findLongWord ('Hi, i am learning javascript'));
+
+    console.log ('=================================')
+
+    
+    
+    console.log ('+4) Удалить пробелы в строке (Hi, i am learning javascript)')
+
+        var fourth = 'Hi, i am learning javascript';
+
+    console.log( fourth.split(' ').join('') );
+
+
+    console.log ('=================================')
+
+    console.log ('+5) Заменить пробелы на зяпятые в фразе (Hi, i am learning javascript)')
+       
+       var fifth = 'Hi, i am learning javascript';
+
+    console.log( fifth.split(' ').join(',') );
+
+    console.log ('=================================')
+
+    console.log ('+6) Отфильтровать массив [3, 42, 234, 5, 3, 21, 53] таким образом чтобы числа были не меньше 20 используя фильтр!')
+
+        var sixth = [3, 42, 234, 5, 3, 21, 53];
+        sixth = sixth.filter(item => item >= 20);
+        console.log('result: [' + sixth + ']');
+        
+
+    console.log ('=================================')    
+    
+    console.log ('+7) Вернуть новый массив из строк добавив слово ,месяц, к элементу, если число больше 20, используя map')
+    console.log (' 3, 42 месяца, 23 месяца, 5, 3, 21 месяца, 53 месяца ')
+
+     var seventh = [3, 42, 23, 5, 3, 21, 53];
+        function month(arr) {
+            return arr.map(item => item > 20 ? (item + 'месяца') : item);
+        }
+        let arrMonth = month(seventh);
+        console.log(`[ ${arrMonth} ]`);
+
+    console.log ('=================================')     
+        
+    console.log ('Вариант на if') 
+
+    var seventhIf = [3, 42, 23, 5, 3, 21, 53];
+    
+    const mon = seventhIf .map(function (a) {
+            if (a > 20) {
+                a = a + 'месяца'
+            }
+            return a;
+        });
+        console.log(mon);
+
+
+    console.log ('=================================') 
+
+    console.log ('+8) Используя reduce просуммировать элементы которые больше 3 в массиве [3, 42, 23, 5, 3, 21, 53]') 
+
+        var eight = [3, 42, 23, 5, 3, 21, 53];
+        var redSum = eight.reduce((a, b) => b > 3 ? a + b : a, 0);
+        console.log(redSum);
+        
+
+    console.log ('=================================') 
+    
+
+        
+
+
+    
+
+
+
+
+    </script>
+</body>
+
+</html>
